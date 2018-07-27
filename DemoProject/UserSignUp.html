@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<link href="bootstrap.css" rel="stylesheet"/>
+<link href="bootstrap.min.css" rel="stylesheet"/>
+<link href="bootstrap-grid.min.css" rel="stylesheet"/>
+<link href="bootstrap-reboot.min.css" rel="stylesheet"/>
+<style>
+#container{
+	position: fixed;
+    width: 370px;
+    height: 470px;
+	left: 420px;
+	top: 100px;
+	bottom: 100px;
+	border: 3px solid #73AD21; 
+}
+
+#logo-container {
+	position: fixed;
+    width: 350px;
+    height: 80px;
+	left: 425px;
+	top: 110px;
+	bottom: 300px;
+	border: 3px solid #73AD21; 
+}
+#user-container {
+    position: fixed;
+    width: 300px;
+    height: 165px;
+	left: 460px;
+	top: 250px;
+	bottom: 0px;
+    border: 3px solid #73AD21;
+} 
+.input-class{
+	width:270px;	
+	height:30px; 
+}
+#submit{
+	position: fixed;
+	top: 450px;
+	bottom: 0px;
+	left: 550px;
+}
+#msg{
+	position: fixed ;
+	top: 50px;
+}
+#cont{
+	position: fixed ;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	background-color: grey;
+}
+</style>	
+<body>
+<div id="cont">
+	<div id="container" ng-app="app1" ng-controller="ctrl">
+		<div align="center" id="logo-container" >
+			<img src="C:\Users\win 7\Desktop\Sundar\logo.JPG" alt="Smiley face" height="80" width="350">
+		</div>
+		
+		 <!-- <h2 id="msg" align="center">Welcome to GTB!</h2> -->
+	
+	<div id="user-container" ng-app="app1" ng-controller="ctrl">
+		<div class="input-group">
+			<span class="glyphicon glyphicon-envelope"></span>
+			<!-- <input class="form-control mr-sm-2" type="text" placeholder="Enter email" > -->
+			<input  id="emailID" type="textfield" class="input-class" placeholder="Enter Email ID" ng-model="signUp.emailID"></input>
+		</div>
+		<div class="input-group">
+			<span class="glyphicon glyphicon-user"></span>
+			<!-- <input class="form-control mr-sm-2" type="text" placeholder="Enter email" > -->
+			<input  id="userid" type="textfield" class="input-class" placeholder="Enter User-id" ng-model="signUp.userID"></input>
+		</div>
+		<div class="input-group">
+			<span class="glyphicon glyphicon-phone"></span>
+			<input  id="userid" type="textfield" class="input-class" placeholder="Enter Mobile No." ng-model="signUp.mobile"></input>
+		</div>
+		<div class="input-group">
+			<span class="glyphicon glyphicon-lock"></span>
+			<input type="password" class="input-class"  placeholder="Enter Password" ng-model="signUp.password"></input>
+		</div>
+		<div class="input-group">
+			<span class="glyphicon glyphicon-lock"></span>
+			<input type="password" class="input-class"  placeholder="Confirm Password" ng-model="signUp.confirmPassword"></input>
+		</div>
+	</div>
+	
+	<div id="submit">
+		<button class="btn btn-success" ng-click=submit()>Sign Up</button> 
+	</div>
+		<a id="signIn" href="#">Already an User? Sign In</a>
+	</div>
+<div>
+
+<script>
+var app = angular.module('app1',[]);
+app.controller('ctrl',function($scope){
+	$scope.submit = function(){
+		alert('ok');
+	}
+});
+</script>	
+</body>
+</html>
+
+
